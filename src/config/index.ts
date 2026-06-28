@@ -1,15 +1,14 @@
-// this file containss all the basic configuration logif for tha app server to work 
+ import dotenv from 'dotenv';
 
-import dotenv from 'dotenv'
-type serverConfig = {
-    PORT : number
-}
+ type Serverconfig ={
+    PORT : number;
+ }
 
-function Loadenv() {
+ function leadEnv(){
     dotenv.config();
-}
+ }
+ leadEnv();
 
-export const serverConfig : serverConfig = {
-    PORT : Number(process.env.PORT)|| 3000
-} 
-export default Loadenv;
+ export const serverConfig : Serverconfig = {
+    PORT : Number(process.env.PORT)
+ }
