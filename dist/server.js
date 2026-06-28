@@ -1,12 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const express = require("express");
+import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
 const app = express();
-const PORT = 3000;
-app.get('/', (req, res) => {
-    res.send("hello everyone");
+const port = Number(process.env.PORT) || 3000;
+app.get("/", (req, res) => {
+    res.send("Hello everyone");
 });
-app.listen(PORT, () => {
-    console.log("server is running in " + PORT);
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
 //# sourceMappingURL=server.js.map
